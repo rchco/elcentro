@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "xdg-utils": "^0.0.3"
+  }
+}
