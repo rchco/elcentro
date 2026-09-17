@@ -42,7 +42,7 @@ a:hover{color:#d9a13a}
   </div>
 
   <div style="position:relative;width:100%;aspect-ratio:21/9;margin-top:clamp(20px,3vw,32px);border:1px solid #d7dde1">
-    <image-slot id="ec-hero" shape="rect" placeholder="Building shot — Hollywood Blvd. frontage, Amoeba marquee in view"></image-slot>
+    <image-slot id="ec-hero" src="./assets/photos/ec-hero.webp" shape="rect" placeholder="Building shot — Hollywood Blvd. frontage, Amoeba marquee in view"></image-slot>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;margin-top:clamp(20px,3vw,32px)">
@@ -193,7 +193,7 @@ a:hover{color:#d9a13a}
 
       <div style="border:1px solid #10161a;background:#eceff1;display:flex;flex-direction:column">
         <div style="position:relative;width:100%;aspect-ratio:4/5;border-bottom:1px solid #10161a">
-          <image-slot id="ec-team-fh" shape="rect" placeholder="Francesca Howard headshot"></image-slot>
+          <image-slot id="ec-team-fh" src="./assets/photos/ec-team-fh.webp" shape="rect" placeholder="Francesca Howard headshot"></image-slot>
         </div>
         <div style="padding:20px 18px;flex:1">
           <div style="font-family:'Archivo',system-ui,sans-serif;font-weight:800;font-size:27px;line-height:1;letter-spacing:-0.018em;text-transform:none">Francesca Howard</div>
@@ -205,7 +205,7 @@ a:hover{color:#d9a13a}
 
       <div style="border:1px solid #10161a;background:#eceff1;display:flex;flex-direction:column">
         <div style="position:relative;width:100%;aspect-ratio:4/5;border-bottom:1px solid #10161a">
-          <image-slot id="ec-team-rh" shape="rect" placeholder="Ryan Hawley headshot"></image-slot>
+          <image-slot id="ec-team-rh" src="./assets/photos/ec-team-rh.webp" shape="rect" placeholder="Ryan Hawley headshot"></image-slot>
         </div>
         <div style="padding:20px 18px;flex:1">
           <div style="font-family:'Archivo',system-ui,sans-serif;font-weight:800;font-size:27px;line-height:1;letter-spacing:-0.018em;text-transform:none">Ryan Hawley</div>
@@ -218,7 +218,7 @@ a:hover{color:#d9a13a}
 
       <div style="border:1px solid #10161a;background:#eceff1;display:flex;flex-direction:column">
         <div style="position:relative;width:100%;aspect-ratio:4/5;border-bottom:1px solid #10161a">
-          <image-slot id="ec-team-mf" shape="rect" placeholder="Matthew Fainchtein headshot"></image-slot>
+          <image-slot id="ec-team-mf" src="./assets/photos/ec-team-mf.webp" shape="rect" placeholder="Matthew Fainchtein headshot"></image-slot>
         </div>
         <div style="padding:20px 18px;flex:1">
           <div style="font-family:'Archivo',system-ui,sans-serif;font-weight:800;font-size:27px;line-height:1;letter-spacing:-0.018em;text-transform:none">Matthew Fainchtein</div>
@@ -230,7 +230,7 @@ a:hover{color:#d9a13a}
 
       <div style="border:1px solid #10161a;background:#eceff1;display:flex;flex-direction:column">
         <div style="position:relative;width:100%;aspect-ratio:4/5;border-bottom:1px solid #10161a">
-          <image-slot id="ec-team-ss" shape="rect" placeholder="Scarlett Solomon-Romano headshot"></image-slot>
+          <image-slot id="ec-team-ss" src="./assets/photos/ec-team-ss.webp" shape="rect" placeholder="Scarlett Solomon-Romano headshot"></image-slot>
         </div>
         <div style="padding:20px 18px;flex:1">
           <div style="font-family:'Archivo',system-ui,sans-serif;font-weight:800;font-size:27px;line-height:1;letter-spacing:-0.018em;text-transform:none">Scarlett Solomon-Romano</div>
@@ -254,7 +254,7 @@ a:hover{color:#d9a13a}
       <sc-for list="{{ experience }}" as="proj" hint-placeholder-count="6">
         <div style="background:#f7f8f9;box-shadow:0 0 0 1px #d7dde1;display:flex;flex-direction:column">
           <div style="position:relative;width:100%;aspect-ratio:16/9;border-bottom:1px solid #d7dde1">
-            <image-slot id="{{ proj.slot }}" shape="rect" placeholder="{{ proj.shotHint }}"></image-slot>
+            <image-slot id="{{ proj.slot }}" src="{{ proj.photo }}" shape="rect" placeholder="{{ proj.shotHint }}"></image-slot>
           </div>
           <div style="padding:20px 20px 22px">
           <div style="font-family:'Archivo',system-ui,sans-serif;font-weight:800;font-size:24px;line-height:1.02;letter-spacing:-0.025em;text-transform:none;color:#10161a">{{ proj.name }}</div>
@@ -351,7 +351,7 @@ a:hover{color:#d9a13a}
     </div>
 
     <div style="position:relative;width:100%;aspect-ratio:16/7;margin-top:clamp(20px,3vw,28px);border:1px solid #d7dde1">
-      <image-slot id="ec-neighborhood" shape="rect" placeholder="Neighborhood aerial or the KWP neighborhood map — Franklin to Sunset, Wilcox to Gower"></image-slot>
+      <image-slot id="ec-neighborhood" src="./assets/photos/ec-neighborhood.webp" shape="rect" placeholder="Neighborhood aerial or the KWP neighborhood map — Franklin to Sunset, Wilcox to Gower"></image-slot>
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,48px);margin-top:clamp(32px,5vw,56px)">
@@ -400,7 +400,7 @@ a:hover{color:#d9a13a}
       <sc-for list="{{ comps }}" as="k" hint-placeholder-count="6">
         <div style="background:{{ k.bg }};box-shadow:0 0 0 1px #d7dde1;display:flex;flex-direction:column">
           <div style="position:relative;width:100%;aspect-ratio:16/9;border-bottom:1px solid {{ k.rule }}">
-            <image-slot id="{{ k.slot }}" shape="rect" placeholder="{{ k.shotHint }}"></image-slot>
+            <image-slot id="{{ k.slot }}" src="{{ k.photo }}" shape="rect" placeholder="{{ k.shotHint }}"></image-slot>
           </div>
           <div style="padding:22px 20px;display:flex;flex-direction:column;gap:12px;flex:1">
           <div>
@@ -486,7 +486,7 @@ a:hover{color:#d9a13a}
           <div style="color:#8a5a00;margin-bottom:12px;line-height:0;display:flex;justify-content:center"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.6 3.5a4.2 4.2 0 0 0 5.3 5.3L9.6 19.1a2.3 2.3 0 0 1-3.2-3.2z"></path><path d="M4.5 19.5h.01"></path></svg></div>
           
           <div style="font-family:'Archivo',system-ui,sans-serif;font-weight:800;font-size:clamp(24px,2.6vw,31px);line-height:1.05;color:#10161a">TIA</div>
-          <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:0.09em;text-transform:uppercase;color:#5a656d;margin-top:8px">Minimum 1 Year Rent;<br>PendinG delivery condition</div>
+          <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:0.09em;text-transform:uppercase;color:#5a656d;margin-top:8px">Minimum 1 Year Rent;<br>Pending delivery condition</div>
         </div>
       </div>
       <div style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;line-height:1.7;color:#5a656d;margin-top:10px">NNN estimated at ±$1.25 per RSF/month.</div>
@@ -494,10 +494,10 @@ a:hover{color:#d9a13a}
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;margin-top:clamp(20px,3vw,28px)">
       <div style="position:relative;background:#f7f8f9;box-shadow:0 0 0 1px #d7dde1;aspect-ratio:16/10">
-        <image-slot id="ec-plan-upper" shape="rect" placeholder="Site and demising plan — Hollywood Blvd. level"></image-slot>
+        <image-slot id="ec-plan-upper" src="./assets/photos/ec-plan-upper.webp" shape="rect" placeholder="Site and demising plan — Hollywood Blvd. level"></image-slot>
       </div>
       <div style="position:relative;background:#f7f8f9;box-shadow:0 0 0 1px #d7dde1;aspect-ratio:16/10">
-        <image-slot id="ec-plan-lower" shape="rect" placeholder="Site and demising plan — Argyle / El Centro Ave. level, Amoeba and Spectrum in place"></image-slot>
+        <image-slot id="ec-plan-lower" src="./assets/photos/ec-plan-lower.webp" shape="rect" placeholder="Site and demising plan — Argyle / El Centro Ave. level, Amoeba and Spectrum in place"></image-slot>
       </div>
     </div>
 
@@ -511,7 +511,7 @@ a:hover{color:#d9a13a}
       <h2 style="font-family:'Archivo',system-ui,sans-serif;font-weight:700;font-size:clamp(30px,5vw,54px);line-height:1;letter-spacing:-0.025em;text-transform:none;margin:0">The recommended plan</h2>
     </div>
 
-    <p style="font-size: clamp(18px,2.1vw,22px); line-height: 1.45; color: #37424a; max-width: 68ch; margin: clamp(20px,3vw,28px) 0 0; width: 853px; height: 96px">Food and beverage leads; the work is deciding the roster and the order in which it opens. Categories ranked by priority and scored against what El Centro can deliver: 29,000 SF of ground floor, outdoor-dining potential, 507 units overhead, and Amoeba's footfall.</p>
+    <p style="font-size:clamp(18px,2.1vw,22px);line-height:1.45;color:#37424a;max-width:68ch;margin:clamp(20px,3vw,28px) 0 0">Food and beverage leads; the work is deciding the roster and the order in which it opens. Categories ranked by priority and scored against what El Centro can deliver: 29,000 SF of ground floor, outdoor-dining potential, 507 units overhead, and Amoeba's footfall.</p>
 
     <div style="margin-top:clamp(26px,3.8vw,40px);border-top:1px solid #d7dde1;padding-top:clamp(24px,3.5vw,36px)">
       
@@ -798,12 +798,12 @@ class Component extends DCLogic {
     return {
 
       experience: [
-        { name: 'Sunset + Vine', slot: 'ec-exp-sunset-vine', shotHint: 'Sunset + Vine — storefront or junior-anchor frontage', address: '1555 N. Vine St., Los Angeles, CA 90028', landlord: 'GID', units: '300', retail: '80,000 SF', deals: 'Advised Landlord on the best positioning of shop space to attract box and junior box tenants. Provided dynamic market guidance on renewal rents, and advised on anchor discussion to make way for a broader class of allowed uses.' },
-        { name: 'W Hotel Hollywood', slot: 'ec-exp-w-hotel', shotHint: 'W Hotel Hollywood — Hollywood & Vine corner retail', address: '6250 Hollywood Blvd., Los Angeles, CA 90028', landlord: 'Trinity Investments', units: '143 condos · 305 hotel rooms', retail: '25,000 SF', deals: 'Prime Hollywood locale at Hollywood & Vine across from El Centro and the Pantages, with hard corner visibility for prominent brands.' },
-        { name: 'South Park Apartments', slot: 'ec-exp-south-park', shotHint: 'South Park Apartments — ground-floor retail', address: '301 W. Olympic Blvd., Los Angeles, CA 90015', landlord: 'GID', units: '284', retail: '16,000 SF', deals: 'Leased challenging mid-block space to high end women’s salon in South Park in ground floor of luxury high rise. Working through deals with coffee and Tulum-influenced massage concepts.' },
-        { name: 'AVA Hollywood', slot: 'ec-exp-ava-hollywood', shotHint: 'AVA Hollywood — Media District retail frontage', address: '6677 Santa Monica Blvd., Los Angeles, CA 90038', landlord: 'Vivmark Residential', units: '120', retail: '25,000 SF', deals: 'Mother\'s Market, Stereoscope, [solidcore], and Stretch Lab in a 695-unit apartment complex in Hollywood\'s Media District.' },
-        { name: 'Skylux on Wilshire', slot: 'ec-exp-skylux', shotHint: 'Skylux on Wilshire — ground-floor retail', address: '1027 Wilshire Blvd., Los Angeles, CA 90017', landlord: 'Essex Property Trust', units: '376', retail: '6,500 SF', deals: 'First generation restaurant space will expand Landlord’s offering to luxury residents and surrounding community immediately west of DTLA’s financial district.' },
-        { name: 'West Hollywood Gateway', slot: 'ec-exp-weho-gateway', shotHint: 'West Hollywood Gateway — center exterior', address: '7100 Santa Monica Blvd., West Hollywood, CA 90046', landlord: 'Clarion Partners', units: 'n/a', retail: '252,000 SF', deals: 'This leasing team has taken a fresh approach to leasing this suburban style center at this high traffic intersection of La Brea and Santa Monica. Soon to be announced credit-grade coffee operator, and hip breakfast concepts will join the lineup in 2027.  ' }
+        { name: 'Sunset + Vine', slot: 'ec-exp-sunset-vine', photo: './assets/photos/ec-exp-sunset-vine.webp', shotHint: 'Sunset + Vine — storefront or junior-anchor frontage', address: '1555 N. Vine St., Los Angeles, CA 90028', landlord: 'GID', units: '300', retail: '80,000 SF', deals: 'Advised Landlord on the best positioning of shop space to attract box and junior box tenants. Provided dynamic market guidance on renewal rents, and advised on anchor discussion to make way for a broader class of allowed uses.' },
+        { name: 'W Hotel Hollywood', slot: 'ec-exp-w-hotel', photo: './assets/photos/ec-exp-w-hotel.webp', shotHint: 'W Hotel Hollywood — Hollywood & Vine corner retail', address: '6250 Hollywood Blvd., Los Angeles, CA 90028', landlord: 'Trinity Investments', units: '143 condos · 305 hotel rooms', retail: '25,000 SF', deals: 'Prime Hollywood locale at Hollywood & Vine across from El Centro and the Pantages, with hard corner visibility for prominent brands.' },
+        { name: 'South Park Apartments', slot: 'ec-exp-south-park', photo: './assets/photos/ec-exp-south-park.webp', shotHint: 'South Park Apartments — ground-floor retail', address: '301 W. Olympic Blvd., Los Angeles, CA 90015', landlord: 'GID', units: '284', retail: '16,000 SF', deals: 'Leased challenging mid-block space to high end women’s salon in South Park in ground floor of luxury high rise. Working through deals with coffee and Tulum-influenced massage concepts.' },
+        { name: 'AVA Hollywood', slot: 'ec-exp-ava-hollywood', photo: './assets/photos/ec-exp-ava-hollywood.webp', shotHint: 'AVA Hollywood — Media District retail frontage', address: '6677 Santa Monica Blvd., Los Angeles, CA 90038', landlord: 'Vivmark Residential', units: '120', retail: '25,000 SF', deals: 'Mother\'s Market, Stereoscope, [solidcore], and Stretch Lab in a 695-unit apartment complex in Hollywood\'s Media District.' },
+        { name: 'Skylux on Wilshire', slot: 'ec-exp-skylux', photo: './assets/photos/ec-exp-skylux.webp', shotHint: 'Skylux on Wilshire — ground-floor retail', address: '1027 Wilshire Blvd., Los Angeles, CA 90017', landlord: 'Essex Property Trust', units: '376', retail: '6,500 SF', deals: 'First generation restaurant space will expand Landlord’s offering to luxury residents and surrounding community immediately west of DTLA’s financial district.' },
+        { name: 'West Hollywood Gateway', slot: 'ec-exp-weho-gateway', photo: './assets/photos/ec-exp-weho-gateway.webp', shotHint: 'West Hollywood Gateway — center exterior', address: '7100 Santa Monica Blvd., West Hollywood, CA 90046', landlord: 'Clarion Partners', units: 'n/a', retail: '252,000 SF', deals: 'This leasing team has taken a fresh approach to leasing this suburban style center at this high traffic intersection of La Brea and Santa Monica. Soon to be announced credit-grade coffee operator, and hip breakfast concepts will join the lineup in 2027.  ' }
       ],
 
       landlords: ['Amazon (corporate campus)', 'Asana Partners', 'BlackRock', 'Blatteis & Schnur', 'Carmel Partners', 'Douglas Emmett', 'DWS / RREEF', 'The Georgetown Company', 'Gindi Capital', 'IMT Capital', 'The Kroenke Group', 'Robertson Properties'],
@@ -825,12 +825,12 @@ class Component extends DCLogic {
       ],
 
       comps: [
-        Object.assign({ name: 'El Centro', slot: 'ec-comp-el-centro', shotHint: 'El Centro — Hollywood Blvd. frontage', tag: 'This proposal \u00b7 507 units above', size: '\u00b129,325 RSF available / 13 spaces', tenants: 'Amoeba Music, BookOff, Spectrum; the balance of the ground floor available to merchandise as one collection', rent: '$3.50 \u2013 $5.25 NNN', visits: 'Baseline to be established' }, dark),
-        Object.assign({ name: 'Sunset + Vine', slot: 'ec-comp-sunset-vine', shotHint: 'Sunset + Vine — retail frontage', tag: 'Two blocks west \u00b7 300 units', size: '80,000 SF retail', tenants: 'Burlington, Wake and Late, 800 Degrees; Walgreens vacating', rent: 'Not published', visits: '294,000 \u00b7 448 min' }, light),
-        Object.assign({ name: 'Arrive Hollywood', slot: 'ec-comp-eastown', shotHint: 'Eastown / ARRIVE — retail frontage', tag: 'Across the street \u00b7 535 units', size: '100,000 SF retail', tenants: 'Shake Shack, Funko, Afters Ice Cream, CVS, Dunkin\u2019, Pressed Juicery', rent: '$4.35 NNN', visits: '500,400 \u00b7 179 min' }, light),
-        Object.assign({ name: '1600 Vine', slot: 'ec-comp-1600-vine', shotHint: '1600 Vine — retail frontage', tag: 'One block west', size: '12,120 SF retail', tenants: 'BMO Bank', rent: 'Withheld', visits: '509,400 \u00b7 72 min' }, light),
-        Object.assign({ name: 'Hanover Hollywood', slot: 'ec-comp-hanover', shotHint: 'Hanover Hollywood — Selma Ave. retail', tag: 'Selma Ave.', size: '32,595 SF retail', tenants: 'Trader Joe\u2019s, Wells Fargo, Hair by Nico\u2019s, Bubbles Dry Cleaners', rent: '$3.95 MG', visits: '1,200,000 \u00b7 53 min' }, light),
-        Object.assign({ name: 'Ovation', slot: 'ec-comp-ovation', shotHint: 'Ovation — Hollywood & Highland', tag: 'Hollywood & Highland', size: '475,000 SF retail', tenants: 'Lucky Strike, Hard Rock Cafe, Foot Locker, Walgreens', rent: 'Rolling vacancies', visits: '3,300,000 \u00b7 83 min' }, light)
+        Object.assign({ name: 'El Centro', slot: 'ec-comp-el-centro', photo: './assets/photos/ec-comp-el-centro.webp', shotHint: 'El Centro — Hollywood Blvd. frontage', tag: 'This proposal \u00b7 507 units above', size: '\u00b129,325 RSF available / 13 spaces', tenants: 'Amoeba Music, BookOff, Spectrum; the balance of the ground floor available to merchandise as one collection', rent: '$3.50 \u2013 $5.25 NNN', visits: 'Baseline to be established' }, dark),
+        Object.assign({ name: 'Sunset + Vine', slot: 'ec-comp-sunset-vine', photo: './assets/photos/ec-comp-sunset-vine.webp', shotHint: 'Sunset + Vine — retail frontage', tag: 'Two blocks west \u00b7 300 units', size: '80,000 SF retail', tenants: 'Burlington, Wake and Late, 800 Degrees; Walgreens vacating', rent: 'Not published', visits: '294,000 \u00b7 448 min' }, light),
+        Object.assign({ name: 'Arrive Hollywood', slot: 'ec-comp-eastown', photo: './assets/photos/ec-comp-eastown.webp', shotHint: 'Eastown / ARRIVE — retail frontage', tag: 'Across the street \u00b7 535 units', size: '100,000 SF retail', tenants: 'Shake Shack, Funko, Afters Ice Cream, CVS, Dunkin\u2019, Pressed Juicery', rent: '$4.35 NNN', visits: '500,400 \u00b7 179 min' }, light),
+        Object.assign({ name: '1600 Vine', slot: 'ec-comp-1600-vine', photo: './assets/photos/ec-comp-1600-vine.webp', shotHint: '1600 Vine — retail frontage', tag: 'One block west', size: '12,120 SF retail', tenants: 'BMO Bank', rent: 'Withheld', visits: '509,400 \u00b7 72 min' }, light),
+        Object.assign({ name: 'Hanover Hollywood', slot: 'ec-comp-hanover', photo: './assets/photos/ec-comp-hanover.webp', shotHint: 'Hanover Hollywood — Selma Ave. retail', tag: 'Selma Ave.', size: '32,595 SF retail', tenants: 'Trader Joe\u2019s, Wells Fargo, Hair by Nico\u2019s, Bubbles Dry Cleaners', rent: '$3.95 MG', visits: '1,200,000 \u00b7 53 min' }, light),
+        Object.assign({ name: 'Ovation', slot: 'ec-comp-ovation', photo: './assets/photos/ec-comp-ovation.webp', shotHint: 'Ovation — Hollywood & Highland', tag: 'Hollywood & Highland', size: '475,000 SF retail', tenants: 'Lucky Strike, Hard Rock Cafe, Foot Locker, Walgreens', rent: 'Rolling vacancies', visits: '3,300,000 \u00b7 83 min' }, light)
       ],
 
       dayOne: [
