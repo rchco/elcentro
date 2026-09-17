@@ -1,29 +1,28 @@
 # El Centro Leasing Proposal
 
-Static site. Deploy with:
+Static site, flat at the root. Deploy with:
 
     npx wrangler deploy
 
 ## Structure
 
-    wrangler.toml                     assets config — wrangler needs this to find the site
-    public/index.html                 the proposal
-    public/support.js                 runtime
-    public/image-slot.js              image runtime
-    public/image-slots.state.json     crop/framing only (small)
-    public/assets/photos/             the 20 building & team photos
-    public/assets/                    logos and brand marks
+    wrangler.toml            assets config
+    index.html               the proposal
+    support.js               runtime
+    image-slot.js            image runtime
+    image-slots.state.json   crop/framing only (small)
+    assets/photos/           the 20 building & team photos
+    assets/                  logos and brand marks
 
 ## Notes
 
-- Keep `public/` intact. `index.html` loads the two scripts and fetches
-  `image-slots.state.json` by relative path; move or rename either and the
-  photos stop loading.
-- Photos are real files in `public/assets/photos/`, referenced by the page.
-  The state file now carries only crop positions, so it stays a few hundred
-  bytes. Earlier it inlined every photo as base64 and grew past the 2 MB write
-  ceiling, which silently dropped new photos.
+- Photos are real files in `assets/photos/`, referenced directly by the page.
+  The state file carries only crop positions, so it stays a few hundred bytes.
+  Earlier it inlined every photo as base64 and grew past a 2 MB write ceiling,
+  which silently dropped newly added photos.
 - The state file deliberately has no leading dot. As `.image-slots.state.json`
   it is treated as a hidden file and several static hosts refuse to serve it.
 - Must be served over HTTP. Opening `index.html` from the filesystem blocks
-  the state-file fetch and the photos will not appear.
+  the state-file fetch and the crops fall back to centered.
+- When replacing a deployed copy, delete the old files first so nothing stale
+  is left behind.
